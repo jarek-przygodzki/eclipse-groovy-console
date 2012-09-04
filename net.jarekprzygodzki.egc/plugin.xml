@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="Groovy Console Action Set"
+            visible="true"
+            id="net.jarekprzygodzki.egc.actionSet">
+         <menu
+               label="&amp;Tools"
+               id="toolsMenu">
+            <separator
+                  name="toolsGroup">
+            </separator>
+         </menu>
+         <action
+               label="&amp;Show Groovy Console"
+               class="net.jarekprzygodzki.egc.actions.ShowGroovyConsoleAction"
+               menubarPath="toolsMenu/toolsGroup"
+               toolbarPath="toolsGroup"
+               id="net.jarekprzygodzki.egc.actions.ShowGroovyConsoleAction">
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>
