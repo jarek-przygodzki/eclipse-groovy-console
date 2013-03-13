@@ -25,6 +25,7 @@ public class ShowGroovyConsoleAction implements IWorkbenchWindowActionDelegate {
 
 	private Console console;
 
+	@Override
 	public void run(IAction action) {
 		Bundle bundle = GroovyConsolePlugin.getDefault().getBundle();
 		BundleContext bundleContext = bundle.getBundleContext();
@@ -34,13 +35,16 @@ public class ShowGroovyConsoleAction implements IWorkbenchWindowActionDelegate {
 		console.run();
 	}
 
+	@Override
 	public void dispose() {
 		console.exit();
 	}
 
+	@Override
 	public void selectionChanged(IAction action, ISelection selection) {
 	}
-
+	
+	@Override
 	public void init(IWorkbenchWindow window) {
 	}
 }

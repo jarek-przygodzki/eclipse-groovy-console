@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-
+   <!--
    <extension
          point="org.eclipse.ui.actionSets">
       <actionSet
@@ -15,8 +15,7 @@
                   name="toolsGroup">
             </separator>
          </menu>
-         <action
-               label="&amp;Show Groovy Console"
+         <action    label="&amp;Show Groovy Console"
                class="net.jarekprzygodzki.egc.actions.ShowGroovyConsoleAction"
                menubarPath="toolsMenu/toolsGroup"
                toolbarPath="toolsGroup"
@@ -24,5 +23,36 @@
          </action>
       </actionSet>
    </extension>
-
+   -->
+   <extension
+         point="org.eclipse.ui.editors">
+             <editor
+                class="net.jarekprzygodzki.egc.editors.GroovyConsoleEditor"
+                id="net.jarekprzygodzki.egc.editors.GroovyConsoleEditorId"
+                name="Groovy Console">
+            </editor>
+   </extension>
+      
+   <extension
+         point="org.eclipse.ui.commands">
+             <command
+                  description="Show Groovy Console"
+                  id="net.jarekprzygodzki.egc.editors.showConsoleCommandId"
+                  defaultHandler="net.jarekprzygodzki.egc.editors.handler.CallEditor"
+                  name="Show Groovy Console">
+            </command>
+   </extension>
+      
+   <extension
+         point="org.eclipse.ui.menus">
+       <menuContribution 
+              locationURI="menu:org.eclipse.ui.main.menu"> 
+            <menu id="window">
+                 <command 
+                    commandId="net.jarekprzygodzki.egc.editors.showConsoleCommandId" 
+                    id="net.jarekprzygodzki.egc.commands.showEditorFromMainManuId"> 
+              </command>    
+            </menu>
+        </menuContribution>  
+   </extension>  
 </plugin>
