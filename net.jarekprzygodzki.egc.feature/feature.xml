@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.jarekprzygodzki.egc.feature"
+      label="%featureName"
+      version="0.1.0.qualifier"
+      provider-name="%providerName">
+
+  <description url="https://github.com/jarek-przygodzki/eclipse-groovy-console/">
+      %description
+   </description>
+
+   <copyright>
+      %description
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+   
+   <url>
+      <update label="%updateSiteName" url="https://github.com/jarek-przygodzki/eclipse-groovy-console/tree/master/update-site"/>
+   </url>
+   
+   <plugin
+         id="net.jarekprzygodzki.egc"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
