@@ -17,10 +17,6 @@
       %license
    </license>
    
-   <url>
-      <update label="%updateSiteName" url="https://github.com/jarek-przygodzki/eclipse-groovy-console/tree/master/update-site"/>
-   </url>
-   
    <plugin
          id="net.jarekprzygodzki.egc"
          download-size="0"
