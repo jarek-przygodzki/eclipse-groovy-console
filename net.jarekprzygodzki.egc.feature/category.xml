@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/net.jarekprzygodzki.egc.feature_0.1.0.qualifier.jar" id="net.jarekprzygodzki.egc.feature" version="0.1.0.qualifier">
-      <category name="net.jarekprzygodzki.egc"/>
-   </feature>
-   <category-def name="net.jarekprzygodzki.egc" label="Eclipse Groovy Console"/>
-</site>
