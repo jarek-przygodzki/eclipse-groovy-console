@@ -9,17 +9,13 @@
 
 package net.jarekprzygodzki.egc.actions;
 
-import net.jarekprzygodzki.egc.GroovyConsolePlugin;
-
-import groovy.lang.Binding;
 import groovy.ui.Console;
+import net.jarekprzygodzki.egc.ConsoleHelper;
 
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.IWorkbenchWindowActionDelegate;
-import org.osgi.framework.Bundle;
-import org.osgi.framework.BundleContext;
 
 public class ShowGroovyConsoleAction implements IWorkbenchWindowActionDelegate {
 
@@ -27,12 +23,7 @@ public class ShowGroovyConsoleAction implements IWorkbenchWindowActionDelegate {
 
 	@Override
 	public void run(IAction action) {
-		Bundle bundle = GroovyConsolePlugin.getDefault().getBundle();
-		BundleContext bundleContext = bundle.getBundleContext();
-		Binding binding = new Binding();
-		binding.setVariable("bundleContext", bundleContext); //$NON-NLS-1$
-		console = new Console(binding);
-		console.run();
+		console = ConsoleHelper.showConsole();
 	}
 
 	@Override
