@@ -1,5 +1,23 @@
-.settings/
-bin/
-target/
+# Eclipse
 .classpath
 .project
+.settings/
+bin/**
+# Maven
+target/
+log/
+# Intellij
+.idea/
+*.iml
+*.iws
+# Mac
+.DS_Store
+# Temporary files
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+local.properties
+# Locally stored "Eclipse launch configurations"
+*.launch
