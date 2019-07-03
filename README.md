@@ -7,7 +7,3 @@ Build
 -----
 
     mvn clean package
-
-Install
--------
-Eclipse Groovy Console can be installed from following update site: http://jarek-przygodzki.github.io/eclipse-groovy-console/p2-repository
